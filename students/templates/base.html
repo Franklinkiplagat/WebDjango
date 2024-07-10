@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BASE</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+<!--Start of navigation section-->
+<div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary" href="contactus.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary" href="aboutus.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!--End of navigation section-->
+{% block content%}
+<!--start carousel-->
+{% block carousel %}
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../static/images/img1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/img2.jpg" alt="Chicago" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/img3.jpg" alt="New York" class="d-block" style="width:100%">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="container-fluid mt-3">
+  <h3>Carousel</h3>
+  <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+</div>
+{% endblock %}
+<!--end carousel-->
+{% endblock %}
+<div class="footer">
+    <h3>THIS IS MY FOOTER</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda hic nulla obcaecati officia quo? Ad aspernatur at beatae delectus enim est harum labore magni perferendis quam qui reprehenderit, soluta vero.</p>
+
+
+
+</div>
+</body>
+</html>
